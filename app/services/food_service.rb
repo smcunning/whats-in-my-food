@@ -1,5 +1,4 @@
 class FoodService
-
   def self.food_list(search_term, result_quantity)
     results = conn.get('/fdc/v1/foods/search?') do |req|
       req.params[:query] = search_term
