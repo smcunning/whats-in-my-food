@@ -1,7 +1,8 @@
 class FoodsController < ApplicationController
   def index
-
-    @foods = SearchFacade.new(params[:q]) 
+    search_term = params[:q]
+    result_quantity = 10
+    @foods = SearchFacade.food_list(search_term, result_quantity)
 
     # conn = Faraday.new(url: 'https://api.nal.usda.gov/') do |f|
     #   f.params[:api_key] = ENV['FOODS_API_KEY']
