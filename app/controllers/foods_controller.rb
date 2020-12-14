@@ -12,6 +12,5 @@ class FoodsController < ApplicationController
     food_list = JSON.parse(results.body, symbolize_names: true)
 
     @foods = food_list[:foods]
-    require "pry"; binding.pry
   end
 end
