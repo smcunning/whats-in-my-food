@@ -9,7 +9,7 @@ describe "visitor searches for food" do
 
   it 'can see a total number of items returned by the search' do
     expect(current_path).to eq("/foods")
-
+    save_and_open_page
     expect(page).to have_content("10 Foods")
   end
 
