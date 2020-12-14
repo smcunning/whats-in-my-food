@@ -4,7 +4,7 @@ class Food
               :brand,
               :ingredients
   def initialize(attributes)
-    @code = attributes[:qtinUpc]
+    @code = attributes[:gtinUpc]
     @description = attributes[:description]
     @brand = attributes[:brandOwner]
     @ingredients = attributes[:ingredients]

@@ -10,6 +10,7 @@ describe 'Food PORO' do
            }
 
     food = Food.new(food_data)
+    expect(food.code).to eq(food_data[:gtinUpc])
     expect(food.description).to eq(food_data[:description])
     expect(food.brand).to eq(food_data[:brandOwner])
     expect(food.ingredients).to eq(food_data[:ingredients])
